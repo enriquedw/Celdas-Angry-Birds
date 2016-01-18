@@ -24,6 +24,7 @@ import ab.utils.StateUtil;
 import ab.vision.ABObject;
 import ab.vision.GameStateExtractor.GameState;
 import ab.vision.Vision;
+import ar.fi.uba.celdas.Sensor;
 
 public class NaiveAgent implements Runnable {
 
@@ -139,6 +140,11 @@ public class NaiveAgent implements Runnable {
         // get all the pigs
  		List<ABObject> pigs = vision.findPigsMBR();
 
+ 		System.out.println("Holas");
+ 		
+ 		Sensor sensor = new Sensor();
+ 		(sensor.sensarEntorno(vision)).print();
+ 		
 		GameState state = aRobot.getState();
 
 		// if there is a sling, then play, otherwise just skip.

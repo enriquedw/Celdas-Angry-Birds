@@ -223,6 +223,7 @@ public class ClientNaiveAgent implements Runnable {
 		
 		 // get all the pigs
  		List<ABObject> pigs = vision.findPigsMBR();
+		System.out.println("Holas");
  		
 		GameState state = ar.checkState();
 		// if there is a sling, then play, otherwise skip.
